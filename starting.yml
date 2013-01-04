@@ -1,3 +1,4 @@
+---
 Playercreateinfo:
   - comment: set Grizzlemaw as starting area for all races
     method: update

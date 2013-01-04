@@ -1,3 +1,4 @@
+---
 # Base NPC properties such as friendly to both factions, level 80, and so on
 _BaseNpcProps: &BASE
     faction_A: FRIENDLY
@@ -84,23 +85,7 @@ npc:
     name: Alexstrasza
     subname: Relentless Mainsets
     npcflag: [VENDOR, QUEST_GIVER]
-    items:
-      - !getitems {name: Relentless Gladiator's Dreadplate %}
-      - !getitems {name: Relentless Gladiator's Leather %}
-      - !getitems {name: Relentless Gladiator's Chain %}
-      - !getitems {name: Relentless Gladiator's Silk %}
-      - !getitems {name: Relentless Gladiator's Felweave %}
-      - !getitems {name: Relentless Gladiator's Plate %}
-      - !getitems {name: Relentless Gladiator's Kodohide %}
-      - !getitems {name: Relentless Gladiator's Dragonhide %}
-      - !getitems {name: Relentless Gladiator's Wyrmhide %}
-      - !getitems {name: Relentless Gladiator's Ornamented %}
-      - !getitems {name: Relentless Gladiator's Scaled %}
-      - !getitems {name: Relentless Gladiator's Mail %}
-      - !getitems {name: Relentless Gladiator's Linked %}
-      - !getitems {name: Relentless Gladiator's Ringmail %}
-      - !getitems {name: Relentless Gladiator's Mooncloth %}
-      - !getitems {name: Relentless Gladiator's Satin %}
+    items: !include "itemlists/relent_mainset.yml"
   # 50004 - RELENTLESS OFFSET
   - <<: *BASE
     method: MERGE
@@ -110,30 +95,7 @@ npc:
     name: Kalecgos
     subname: Relentless Offsets
     npcflag: VENDOR
-    items:
-      - !getitems {name: Relentless Gladiator's Cuffs %}
-      - !getitems {name: Relentless Gladiator's Cord %}
-      - !getitems {name: Relentless Gladiator's Treads %}
-      - !getitems {name: Relentless Gladiator's Armwraps %}
-      - !getitems {name: Relentless Gladiator's Belt %}
-      - !getitems {name: Relentless Gladiator's Boots %}
-      - !getitems {name: Relentless Gladiator's Bracers %}
-      - !getitems {name: Relentless Gladiator's Girdle %}
-      - !getitems {name: Relentless Gladiator's Greaves %}
-      - !getitems {name: Relentless Gladiator's Wristguards %}
-      - !getitems {name: Relentless Gladiator's Waistguard %}
-      - !getitems {name: Relentless Gladiator's Sabatons %}
-      - !getitems {name: Relentless Gladiator's Pendant of %}
-      - !getitems {name: Relentless Gladiator's Band of %}
-      - !getitems {name: Relentless Gladiator's Cloak of %}
-      - !getitems {name: Relentless Gladiator's Idol of %}
-      - !getitems {name: Relentless Gladiator's Libram of %}
-      - !getitems {name: Relentless Gladiator's Totem of %}
-      - !getitems {name: Relentless Gladiator's Sigil of %}
-      # Medallion of the Horde, iLvL 226
-      - 42126
-      # Medallion of the Alliance, iLvL 226
-      - 42124
+    items: !include "itemlists/relent_offsets.yml"
   # 50005 - GEMS
   - <<: *BASE
     method: MERGE
@@ -161,53 +123,7 @@ npc:
     name: Krasus
     subname: Relentless Weapons
     npcflag: VENDOR
-    items:
-      - Relentless Gladiator's Dirk
-      - Relentless Gladiator's Eviscerator
-      - Relentless Gladiator's Spike
-      - Relentless Gladiator's Blade of Celerity
-      - Relentless Gladiator's Splitter
-      - Relentless Gladiator's Dicer
-      - Relentless Gladiator's Handaxe
-      - Relentless Gladiator's Swiftblade
-      - Relentless Gladiator's Longblade
-      - Relentless Gladiator's Left Claw
-      - Relentless Gladiator's Left Razor
-      - Relentless Gladiator's Gavel
-      - Relentless Gladiator's Punisher
-      - Relentless Gladiator's Truncheon
-      - Relentless Gladiator's Shotgun
-      - Relentless Gladiator's Repeater
-      - Relentless Gladiator's Recurve
-      - Relentless Gladiator's War Edge
-      - Relentless Gladiator's Acute Staff
-      - Relentless Gladiator's Skirmish Staff
-      - Relentless Gladiator's Combat Staff
-      - Relentless Gladiator's Light Staff
-      - Relentless Gladiator's Sunderer
-      - Relentless Gladiator's Claymore
-      - Relentless Gladiator's Halberd
-      - Relentless Gladiator's Crusher
-      - Relentless Gladiator's Piercing Touch
-      - Relentless Gladiator's Touch of Defeat
-      - Relentless Gladiator's Baton of Light
-      - Relentless Gladiator's Wand of Alacrity
-      - Relentless Gladiator's Compendium
-      - Relentless Gladiator's EndGame
-      - Relentless Gladiator's Reprieve
-      - Relentless Gladiator's Grimoire
-      - Relentless Gladiator's Barrier
-      - Relentless Gladiator's Redoubt
-      - Relentless Gladiator's Shield Wall
-      - Relentless Gladiator's Idol of Resolve
-      - Relentless Gladiator's Idol of Steadfastness
-      - Relentless Gladiator's Idol of Tenacity
-      - Relentless Gladiator's Libram of Fortitude
-      - Relentless Gladiator's Libram of Justice
-      - Relentless Gladiator's Totem of Indomitability
-      - Relentless Gladiator's Totem of Survival
-      - Relentless Gladiator's Totem of the Third Wind
-      - Relentless Gladiator's Sigil of Strife
+    items: !include "itemlists/relent_weapons.yml"
   # 50007 - TOC Offsets
   - <<: *BASE
     method: MERGE
@@ -225,84 +141,7 @@ npc:
     name: Montegue
     subname: Trinkets and Accessories
     npcflag: VENDOR
-    items:
-      - Amulet of Binding Elements
-      - Charge of the Demon Lord
-      - Charge of the Eredar
-      - Collar of Ceaseless Torment
-      - Collar of Unending Torment
-      - Cry of the Val'kyr
-      - Darkbane Amulet
-      - Darkbane Pendant
-      - Endurance of the Infernal
-      - Fortitude of the Infernal
-      - Legionnaire's Gorget
-      - Pendant of Binding Elements
-      - The Arbiter's Muse
-      - The Executioner's Malice
-      - The Executioner's Vice
-      - Wail of the Val'kyr
-
-      - Band of Callous Aggression
-      - Band of Deplorable Violence
-      - Band of the Traitor King
-      - Band of the Twin Val'kyr
-      - Band of the Violent Temperment
-      - Carnivorous Band
-      - Circle of the Darkmender
-      - Firestorm Band
-      - Firestorm Ring
-      - Gormok's Band
-      - Loop of the Twin Val'kyr
-      - Lurid Manifestation
-      - Planestalker Band
-      - Planestalker Signet
-      - Ring of Callous Aggression
-      - Ring of the Darkmender
-      - Ring of the Violent Temperament
-      - Signet of the Traitor King
-
-      - Binding Light
-      - Binding Stone
-      - Death's Choice
-      - Death's Verdict
-      - Eitrigg's Oath
-      - Fervor of the Frostborn
-      - Fetish of Volatile Power
-      - Juggernaut's Vitality
-      - Reign of the Dead
-      - Reign of the Unliving
-      - Satrina's Impeding Scarab
-      - Solace of the Defeated
-      - Solace of the Fallen
-      - Talisman of Volatile Power
-      - Vengeance of the Forsaken
-      - Victor's Call
-
-      - Blood of the Old God
-      - Comet's Trail
-      - Dark Matter
-      - Elemental Focus Stone
-      - Energy Siphon
-      - Eye of the Broodmother
-      - Flare of the Heavens
-      - Furnace Stone
-      - Heart of Iron
-      - Living Flame
-      - Meteorite Crystal
-      - Mjolnir Runestone
-      - Pandora's Plea
-      - Pyrite Infuser
-      - Royal Seal of King Llane
-      - Scale of Fates
-      - Show of Faith
-      - Sif's Remembrance
-      - Spark of Hope
-      - The General's Heart
-      - Vanquished Clutches of Yogg-Saron
-      - Wrathstone
-
-      - !getitems {name: "Darkmoon Card: %"}
+    items: !include "itemlists/toc_accessories.yml"
   # 50009 - TOC WEAPONS
   - <<: *BASE
     method: MERGE
