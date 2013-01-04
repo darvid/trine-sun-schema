@@ -1,0 +1,7 @@
+--- # edit this file and then rename to config.yml
+db:
+    type: mysql
+    username: trinity
+    password: trinity
+    host: localhost
+    world_db: world

@@ -1,0 +1,11 @@
+Playercreateinfo:
+  - comment: set Grizzlemaw as starting area for all races
+    method: update
+    where:
+        race: in PLAYABLE
+    map: 571
+    zone: 394
+    position_x: 4024.972412
+    position_y: -3752.102783
+    position_z: 151.849899
+    orientation: 4.609744

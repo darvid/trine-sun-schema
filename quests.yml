@@ -1,0 +1,76 @@
+_GrizzlemawQuestTmpl: &GRIZZLEMAW_QUEST_TMPL
+    Method: 2
+    Level: -1
+    ZoneOrSort: 395
+    Flags: 0
+
+QuestTemplate:
+  - Id: 30000
+    <<: *GRIZZLEMAW_QUEST_TMPL
+    Title: "Talents and glyphs, oh my!"
+    Objectives: >
+        Select your talents and then speak with your class trainer to purchase
+        glyphs and learn additional spells.
+    Details: >
+        Hey there $n, and welcome to Sun. Here we use the teleporter NPC
+        excessively to navigate the mall, so prepare for the easiest gearing
+        experience you've ever had.
+
+
+        So grab your spells and head over to the teleporter to visit each
+        stop in order to gear up your character. Good luck and enjoy your
+        time here.
+    OfferRewardText: >
+        Step right up, I'll take you anywhere you want to go! (Well,
+        almost anywhere...)
+    NextQuestIdChain: 30001
+  - Id: 30001
+    <<: *GRIZZLEMAW_QUEST_TMPL
+    Title: "Getting going, gearing up"
+    Objectives: >
+        Speak with the Relentless gear vendors to obtain your starting gear.
+    Details: >
+        Good work so far, now it's time to start gearing up your character by
+        heading over to the Relentless gear vendors and purchase the gear you
+        require to get into battle.
+
+
+        Relentless and other starting gear vendors are located in the level
+        directly above us, and the fastest way to get there is by using this
+        teleporter.
+    OfferRewardText: >
+        Nice job, $n, now grab your gear and get going.
+    PrevQuestId: 30000
+    NextQuestIdChain: 30002
+  - Id: 30002
+    <<: *GRIZZLEMAW_QUEST_TMPL
+    Title: "Gems are truly, truly outrageous"
+    Objectives: >
+        Speak with Vladimir, the Gem vendor.
+    Details: >
+        Almost done! Now all you need are gems, professions, and enchants.
+        Get started by talking to Vladimir the Gem vendor. You can use the
+        teleporter or walk there yourself, as it's right next door!
+    OfferRewardText: >
+        Ah! My order of Shtolichnaya has arrived! ...hic! Spasiba! ...hic!
+    PrevQuestId: 30001
+CreatureQuestrelation:
+  # QUEST 1: NEW PLAYER GUIDE -> TELEPORT NPC
+  - quest: 30000
+    id: 50024
+  # QUEST 2: TELEPORT NPC -> RELENTLESS MAINSET VENDOR
+  - quest: 30001
+    id: 50019
+  # QUEST 3: RELENTLESS MAINSET -> GEM VENDOR
+  - quest: 30002
+    id: 50003
+CreatureInvolvedrelation:
+  # QUEST 1: NEW PLAYER GUIDE -> TELEPORT NPC
+  - quest: 30000
+    id: 50019
+  # QUEST 2: TELEPORT NPC -> RELENTLESS MAINSET VENDOR
+  - quest: 30001
+    id: 50003
+  # QUEST 3: RELENTLESS MAINSET -> GEM VENDOR
+  - quest: 30002
+    id: 50005

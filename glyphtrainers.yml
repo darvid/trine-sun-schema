@@ -1,0 +1,79 @@
+---
+item:
+  - comment: make all glyphs free
+    method: UPDATE
+    where:
+        name: &GLYPHS Glyph of %
+    SellPrice: 0
+
+npc:
+  - comment: add glyphs to Death Knight trainer
+    method: UPDATE
+    where: { name: [Anotherx, Death Knight Trainer] }
+    name: Anotherx
+    subname: Death Knight Trainer
+    npcflag: [GOSSIP, TRAINER, VENDOR]
+    items: !getitems {name: *GLYPHS, AllowableClass: DEATH KNIGHT}
+  - comment: add glyphs to Druid trainer
+    method: UPDATE
+    where: { name: [Enigmz, Druid Trainer] }
+    name: Enigmz
+    subname: Druid Trainer
+    npcflag: [GOSSIP, TRAINER, VENDOR]
+    items: !getitems {name: *GLYPHS, AllowableClass: DRUID}
+  - comment: add glyphs to Hunter trainer
+    method: UPDATE
+    where: { name: [Braindeadly, Hunter Trainer] }
+    name: Braindeadly
+    subname: Hunter Trainer
+    npcflag: [GOSSIP, TRAINER, VENDOR]
+    items: !getitems {name: *GLYPHS, AllowableClass: HUNTER}
+  - comment: add glyphs to Mage trainer
+    method: UPDATE
+    where: { name: [Flyn, Mage Trainer] }
+    name: Flyn
+    subname: Mage Trainer
+    npcflag: [GOSSIP, TRAINER, VENDOR]
+    items: !getitems {name: *GLYPHS, AllowableClass: MAGE}
+  - comment: add glyphs to Priest trainer
+    method: UPDATE
+    where: { name: [Hydra, Priest Trainer] }
+    name: Hydra
+    subname: Priest Trainer
+    npcflag: [GOSSIP, TRAINER, VENDOR]
+    items: !getitems {name: *GLYPHS, AllowableClass: PRIEST}
+  - comment: add glyphs to Paladin trainer
+    method: UPDATE
+    where: { name: [Frakie, Paladin Trainer] }
+    name: Frakie
+    subname: Paladin Trainer
+    npcflag: [GOSSIP, TRAINER, VENDOR]
+    items: !getitems {name: *GLYPHS, AllowableClass: PALADIN}
+  - comment: add glyphs to Rogue trainer
+    method: UPDATE
+    where: { name: [Igno, Rogue Trainer] }
+    name: Igno
+    subname: Rogue Trainer
+    npcflag: [GOSSIP, TRAINER, VENDOR]
+    items: !getitems {name: *GLYPHS, AllowableClass: ROGUE}
+  - comment: add glyphs to Shaman trainer
+    method: UPDATE
+    where: { name: [Kollektiv, Shaman Trainer] }
+    name: Kollektiv
+    subname: Shaman Trainer
+    npcflag: [GOSSIP, TRAINER, VENDOR]
+    items: !getitems {name: *GLYPHS, AllowableClass: SHAMAN}
+  - comment: add glyphs to Warlock trainer
+    method: UPDATE
+    where: { name: [Inflame, Warlock Trainer] }
+    name: Inflame
+    subname: Warlock Trainer
+    npcflag: [GOSSIP, TRAINER, VENDOR]
+    items: !getitems {name: *GLYPHS, AllowableClass: WARLOCK}
+  - comment: add glyphs to Warrior trainer
+    method: UPDATE
+    where: { name: [Hoodrych, Warrior Trainer] }
+    name: Hoodrych
+    subname: Warrior Trainer
+    npcflag: [GOSSIP, TRAINER, VENDOR]
+    items: !getitems {name: *GLYPHS, AllowableClass: WARRIOR}
